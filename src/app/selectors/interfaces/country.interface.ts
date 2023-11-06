@@ -1,4 +1,4 @@
-export interface Countrty {
+export interface Country {
   name: Name;
   tld?: string[];
   cca2: string;
@@ -200,4 +200,11 @@ export enum Region {
   Asia = 'Asia',
   Europa = 'Europa',
   Oceania = 'Oceania',
+}
+
+
+export interface SmallCountry {
+  name: string;
+  cca3: string;
+  borders: string[];
 }
