@@ -24,6 +24,10 @@ export class SideMenuComponent {
       title: 'Switches',
       route: './reactive/switches',
     },
+    {
+      title: 'Selectores',
+      route: './selectores',
+    },
   ];
 
   public authMenu: MenuItem[] = [
