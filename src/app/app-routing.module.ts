@@ -13,6 +13,11 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
+    path: 'signals',
+    loadChildren: () =>
+      import('./signals/signals.module').then((m) => m.SignalsModule),
+  },
+  {
     path: 'selectores',
     component: SelectorsComponent,
   },

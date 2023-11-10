@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 interface MenuItem {
   title: string;
@@ -11,7 +11,8 @@ interface MenuItem {
   styleUrls: ['./side-menu.component.scss'],
 })
 export class SideMenuComponent {
-  public reactiveMenu: MenuItem[] = [
+
+  public reactiveMenu = signal<MenuItem[]>([
     {
       title: 'Basicos',
       route: './reactive/basic',
@@ -28,7 +29,25 @@ export class SideMenuComponent {
       title: 'Selectores',
       route: './selectores',
     },
-  ];
+  ]);
+  // public reactiveMenu: MenuItem[] = [
+  //   {
+  //     title: 'Basicos',
+  //     route: './reactive/basic',
+  //   },
+  //   {
+  //     title: 'Dinamico',
+  //     route: './reactive/dynamic',
+  //   },
+  //   {
+  //     title: 'Switches',
+  //     route: './reactive/switches',
+  //   },
+  //   {
+  //     title: 'Selectores',
+  //     route: './selectores',
+  //   },
+  // ];
 
   public authMenu: MenuItem[] = [
     {
